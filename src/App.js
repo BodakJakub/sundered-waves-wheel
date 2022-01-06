@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import wheel from './wheel_ccexpress.png';
 
@@ -7,6 +7,12 @@ function App() {
   const [rotation, setRotation] = useState(0);
   const [step, setStep] = useState(0);
   const [correctAnimation, setCorrectAnimation] = useState('');
+
+  useEffect(() => {
+    if (step === 4) {
+      alert('Congratulations, corsairs! Arrr!')
+    }
+  }, [step])
 
   const resetWheel = () => {
     setStep(0);
@@ -52,7 +58,6 @@ function App() {
       case 3:
         if (rotation === 0) {
           setStep(step + 1);
-          playAnimationCorrect();
         } else {
           resetWheel();
         }
