@@ -1,0 +1,54 @@
+body {
+  background-image: url('./island.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheel {
+  display: flex;
+  justify-content: center;
+  transition: transform .3s ease-in-out;
+}
+
+.wheel img {
+  max-width: 500px;
+}
+
+.steps {
+  display: flex;
+}
+
+.correct {
+  animation: correct 2s;
+}
+
+.incorrect {
+  animation: incorrect 1s;
+}
+
+@keyframes correct {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.15);}
+  0% {transform: scale(1);}
+}
+
+@keyframes incorrect {
+  0% {transform: translateX(10px);}
+  20% {transform: translateX(-10px);}
+  33% {transform: translateX(15px);}
+  43% {transform: translateX(-17px);}
+  53% {transform: translateX(12px);}
+  60% {transform: translateX(-12px);}
+  70% {transform: translateX(12px);}
+  75% {transform: translateX(-15px);}
+  100% {transform: translateX(0);}
+}
+
+.wheelButtons {
+}
