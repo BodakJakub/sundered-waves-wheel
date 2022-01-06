@@ -20,6 +20,12 @@ body {
   max-width: 500px;
 }
 
+@media screen and (max-width: 1600px) {
+  .wheel img {
+    max-width: 350px;
+  }
+}
+
 .steps {
   display: flex;
 }
