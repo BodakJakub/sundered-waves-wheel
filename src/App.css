@@ -26,9 +26,23 @@ body {
   }
 }
 
-.steps {
-  display: flex;
+.mapBtn {
+  position: absolute;
+  top: 23px;
+  right: 23px;
 }
+
+.mapBtn img {
+  cursor: pointer;
+}
+
+.map {
+  position: absolute;
+  top: 43px;
+  right: 23px;
+  max-width: 530px;
+}
+
 
 .correct {
   animation: correct 2s;

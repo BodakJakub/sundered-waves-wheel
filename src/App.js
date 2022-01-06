@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import wheel from './wheel_ccexpress.png';
+import map from './map.jpg';
+import mapIcon from './map.png';
 
 function App() {
 
   const [rotation, setRotation] = useState(0);
   const [step, setStep] = useState(0);
   const [correctAnimation, setCorrectAnimation] = useState('');
+  const [mapVisible, setMapVisible] = useState('');
 
   useEffect(() => {
     if (step === 4) {
@@ -67,6 +70,10 @@ function App() {
     }
   }
 
+  const showMap = () => {
+    setMapVisible(!mapVisible);
+  }
+
   const addRotation = () => {
     setCorrectAnimation('');
     setRotation(rotation + 90);
@@ -99,6 +106,13 @@ function App() {
           <button onClick={checkWheel}>CHECK THE WHEEL!</button>
         </div>
       </header>
+
+      <div className='mapBtn'>
+        <button onClick={showMap}><img src={mapIcon} alt='a map icon'/></button>
+      </div>
+
+      {mapVisible && <img className='map' src={map} alt="a map" />}
+
     </div>
   );
 }
