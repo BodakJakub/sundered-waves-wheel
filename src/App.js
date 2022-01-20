@@ -20,12 +20,10 @@ function App() {
   const resetWheel = () => {
     setStep(0);
     setRotation(0);
-    alert('This doesn\'t seem to be the correct combination, ye scurvy dogs!');
-    setCorrectAnimation('incorrect');
   }
 
   const playAnimationCorrect = () => {
-    setCorrectAnimation('correct');
+    //  ('correct');
   }
 
   const checkWheel = () => {
